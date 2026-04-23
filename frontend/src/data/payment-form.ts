@@ -1,0 +1,62 @@
+import { PAYMENT_MODE_OPTIONS } from "@/enums";
+
+export const paymentFormConfig = [
+  {
+    name: "customer",
+    label: "Customer",
+    type: "select",
+    placeholder: "Select Customer",
+    gridSpan: "md:col-span-6",
+    required: true,
+    options: [],
+  },
+  {
+    name: "paymentDate",
+    label: "Payment Date",
+    type: "date",
+    gridSpan: "md:col-span-6",
+    required: true,
+  },
+  {
+    name: "paymentMode",
+    label: "Payment Mode",
+    type: "select",
+    placeholder: "Select Payment Mode",
+    gridSpan: "md:col-span-6",
+    required: true,
+    options: PAYMENT_MODE_OPTIONS,
+  },
+  {
+    name: "invoice",
+    label: "Invoice",
+    type: "select",
+    placeholder: "Select Invoice",
+    gridSpan: "md:col-span-6",
+    required: true,
+    options: [],
+  },
+   {
+    name: "amount",
+    label: "Amount",
+    type: "number",
+    placeholder: "0.00",
+    gridSpan: "md:col-span-6",
+    required: true,
+  },
+  {
+    name: "reference",
+    label: "Reference Number",
+    type: "text",
+    placeholder: "Enter reference",
+    gridSpan: "md:col-span-6",
+    required: false,
+  },
+  {
+    name: "notes",
+    label: "Notes",
+    type: "textarea",
+    placeholder: "Enter notes...",
+    gridSpan: "md:col-span-12",
+    required: false,
+  },
+];

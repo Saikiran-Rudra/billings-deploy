@@ -1,0 +1,65 @@
+openapi: 3.0.0
+info:
+  title: Hisaab Kitaab API
+  version: 1.0.0
+  description: API documentation for Hisaab Kitaab Module
+servers:
+  - url: http://localhost:5000
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+security:
+  - bearerAuth: []
+paths:
+  /api/customers:
+    get:
+      summary: Get all customers
+      tags:
+        - Customers
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: Success
+  /api/invoices:
+    get:
+      summary: Get all invoices
+      tags:
+        - Invoices
+      responses:
+        "200":
+          description: List of invoices
+  /api/payments:
+    get:
+      summary: Get all payments
+      tags:
+        - Payments
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: Success
+  /api/products:
+    get:
+      summary: Get all products
+      tags:
+        - Products
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: Success
+  /api/salesReturns:
+    get:
+      summary: Get all sales returns
+      tags:
+        - SalesReturns
+      security:
+        - bearerAuth: []
+      responses:
+        "200":
+          description: Success
+tags: []
